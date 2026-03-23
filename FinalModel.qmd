@@ -1,0 +1,367 @@
+---
+title: "Poisson GEE Analysis"
+format: pdf
+editor: visual
+---
+
+```{r}
+# Loading packages
+suppressMessages(library(here))
+suppressMessages(library(tidyverse))
+suppressMessages(library(mice))
+suppressMessages(library(table1))
+suppressMessages(library(geepack))
+suppressMessages(library(nlme))
+suppressMessages(library(car))
+suppressMessages(library(naniar))
+suppressMessages(library(ggplot2))
+```
+
+## Data Cleaning
+
+```{r}
+# Loading data
+ambulance <- read.table(file = here::here("ambulance.txt"),
+                        header = TRUE)
+
+# Converting data to a tibble
+ambulance <- tibble(ambulance)
+
+# Showing the first 6 rows of the dataset
+head(ambulance)
+
+# Number of hospitals by trauma center designation
+ambulance %>%
+  group_by(trauma) %>%
+  summarize(n = n_distinct(id)) %>%
+  print(n = 4)
+
+# Converting the trauma variable to a factor with two levels (0/LEVEL III
+# & LEVEL II/LEVEL I) based on
+# https://pmc.ncbi.nlm.nih.gov/articles/PMC12193127/ (Level I is the highest)
+# due to the small number of hospitals for some trauma center designations
+ambulance <- ambulance %>%
+  mutate(
+    trauma = fct_collapse(as.factor(trauma),
+                          "0/Level III" = c("0", "LEVEL III"),
+                          "Level II/Level I" = c("LEVEL II", "LEVEL I")
+                          )
+  )
+
+label(ambulance$trauma) <- "Trauma center designation"
+
+# Converting the EMS level variable to a factor with levels
+# Standby/Basic and Comprehensive
+ambulance <- ambulance %>%
+  mutate(
+    emslevel = fct_collapse(as.factor(emslevel),
+                            "Standby/Basic" = c("Standby", "Basic"),
+                            "Comprehensive" = c("Comprehensive")
+                            )
+  )
+
+label(ambulance$emslevel) <- "EMS level"
+
+# Adding a label for stations
+label(ambulance$stations) <- "Available emergency department stations"
+
+# Number of hospitals per county
+ambulance %>%
+  group_by(county) %>%
+  summarize(n = n_distinct(id)) %>%
+  print(n = 25)
+
+# Due to the small number of hospitals in many counties, consolidating
+# counties into regions based on https://census.ca.gov/regions/ and
+# converting region to a factor variable
+
+region1 <- c("Butte", "Colusa", "El Dorado", "Glenn", "Lassen", "Modoc",
+             "Nevada", "Placer", "Plumas", "Sacramento", "Shasta", "Sierra",
+             "Siskiyou", "Sutter", "Tehama", "Yolo", "Yuba")
+
+region2 <- c("Del Norte", "Humboldt", "Lake", "Mendocino", "Napa", "Sonoma",
+             "Trinity")
+
+region3 <- c("Alameda", "Contra Costa", "Marin", "San Francisco", "San Mateo",
+             "Santa Clara", "Solano")
+
+region4 <- c("Alpine", "Amador", "Calaveras", "Madera", "Mariposa", "Merced",
+             "Mono", "San Joaquin", "Stanislaus", "Tuolumne")
+
+region5 <- c("Monterey", "San Benito", "San Luis Obispo", "Santa Barbara",
+             "Santa Cruz", "Ventura")
+
+region6 <- c("Fresno", "Inyo", "Kern", "Kings", "Tulare")
+
+region7 <- c("Riverside", "San Bernardino")
+
+region8 <- c("Los Angeles")
+
+region9 <- c("Orange")
+
+region10 <- c("Imperial", "San Diego")
+
+ambulance <- ambulance %>%
+  mutate(
+    region = case_when(
+      county %in% region1 ~ 1,
+      county %in% region2 ~ 2,
+      county %in% region3 ~ 3,
+      county %in% region4 ~ 4,
+      county %in% region5 ~ 5,
+      county %in% region6 ~ 6,
+      county %in% region7 ~ 7,
+      county %in% region8 ~ 8,
+      county %in% region9 ~ 9,
+      county %in% region10 ~ 10),
+    region = factor(region,
+                    levels = c("1",
+                               "2",
+                               "3",
+                               "4",
+                               "5",
+                               "6",
+                               "7",
+                               "8",
+                               "9",
+                               "10"),
+                    labels = c("Superior California",
+                               "North Coast",
+                               "San Francisco Bay Area",
+                               "Northern San Joaquin Valley",
+                               "Central Coast",
+                               "Southern San Joaquin Valley",
+                               "Inland Empire",
+                               "Los Angeles County",
+                               "Orange County",
+                               "San Diego - Imperial")))
+
+label(ambulance$region) <- "Region"
+
+# Adding a label for diverthours
+label(ambulance$diverthours) <- "Diversion status hours"
+
+# Adding a label for admitrate
+label(ambulance$admitrate) <- "Admission rate"
+
+# Sorting the data by id and year
+ambulance <- ambulance %>%
+  arrange(id, year) %>%
+  ungroup()
+
+# Adding a time variable representing measurement occasion
+ambulance <- ambulance %>%
+  group_by(id) %>%
+  mutate(time = row_number()) %>%
+  ungroup()
+
+# Only keeping the relevant variables
+ambulance <- ambulance %>%
+  select(year,
+         id,
+         trauma,
+         emslevel,
+         stations,
+         diverthours,
+         admitrate,
+         region,
+         time)
+```
+
+## Create Table 1
+
+```{r}
+
+# Showing a "Table 1" for the dataset
+table1(~ diverthours + trauma + emslevel + stations + admitrate + region |
+         year,
+       data = ambulance)
+```
+
+## Check Assumptions 
+
+## Missing data
+
+```{r}
+# Perform Little's MCAR test
+ambulance %>%
+  dplyr::select(year, id, diverthours) %>%
+  pivot_wider(
+    names_from = year,
+    names_prefix = "y",   # y = diverthours
+    values_from = diverthours
+  ) %>%
+  dplyr::select(-id) %>%
+  naniar::mcar_test()
+# p-value = 0.350, no evidence to suggest the data is not MCAR
+
+# Checking missingness in the response variable diverthours
+ambulance %>%
+  dplyr::select(year, id, diverthours) %>%
+  pivot_wider(names_from = year,
+              names_prefix = "y", # y = diverthours
+              values_from = diverthours) %>%
+  dplyr::select(-id) %>%
+  md.pattern()
+# Missing data pattern is non-monotone from the above grid
+
+# Checking percentage of complete cases
+ambulance %>%
+  group_by(id) %>%
+  summarize(nobs = n_distinct(year)) %>%
+  summarize(total_hospitals = n(),
+            complete_cases = sum(nobs == 3),
+            complete_cases_percentage =
+              (complete_cases / total_hospitals) * 100
+  ) %>%
+  select(complete_cases_percentage)
+
+# Assume data is MCAR and use an available data analysis to avoid dropping
+# too many observations (complete cases percentage is only ~65%)
+```
+
+## Overdispersion
+
+```{r}
+
+# Checking properties of diverthours
+hist(ambulance$diverthours)
+# diverthours is very skewed so we can use a Poisson log link
+
+# Check for overdispersion (descriptive)
+overdispersion_table <- ambulance %>%
+  group_by(year) %>%
+  summarize(meandiverthours = mean(diverthours),
+            vardiverthours = var(diverthours))
+
+# Variance of diverthours is much larger than mean of diverthours for each
+# year, suggesting overdispersion
+```
+
+## Data Structure and Interaction
+
+```{r}
+# Plot mean diversion hours over time
+ggplot(ambulance, aes(year, diverthours)) +
+  stat_summary(fun = mean, geom = "point") +
+  stat_summary(fun = mean, geom = "line", aes(group = 1)) +
+   labs(
+    title =
+      "Mean trajectory for the ambulance diversion hours over years",
+    x = "Year",
+    y = "Mean ambulance diversion hours") +
+  theme_classic() +
+  theme(plot.title = element_text(size = 11, hjust = 0.5))
+
+# Apears to be linear trend, so use time as a continuous variables (not categorical)
+
+# Checking for time-varying covariates
+ambulance %>%
+  group_by(id) %>%
+  summarize(across(c(trauma,
+                     emslevel,
+                     stations,
+                     admitrate,
+                     region),
+                   n_distinct)) %>%
+  summarize(across(everything(), max)) %>%
+  select(-id)
+# trauma, stations, and admitrate are time-varying covariates
+
+# Check for possible interaction term involving year and trauma
+ambulance %>%
+  ggplot(aes(x = year,
+             y = diverthours,
+             colour = trauma)) +
+  stat_summary(aes(group = trauma),
+               fun = mean,
+               geom = "line") +
+  labs(
+    title =
+      "Mean trajectory for the ambulance diversion hours of each trauma level",
+    x = "Year",
+    y = "Mean ambulance diversion hours",
+    colour = "Level") +
+  theme_classic() +
+  theme(plot.title = element_text(size = 11, hjust = 0.5))
+
+# Analysis of response profile model for trauma
+trauma_model <- gls(diverthours ~ trauma * year,
+                    corr=corSymm(form = ~ time | id),
+                    weights = varIdent(form = ~ 1 | year),
+                    method = "REML",
+                    data = ambulance)
+Anova(trauma_model)
+
+# trauma:year p-value > 0.05 so we do not have sufficient evidence to conclude
+# that the patterns of change differ between the groups and thus we will
+# not include trauma:year interaction term in the model
+
+# Check for possible interaction term involving year and emslevel
+ambulance %>%
+  ggplot(aes(x = year,
+             y = diverthours,
+             colour = emslevel)) +
+  stat_summary(aes(group = emslevel),
+               fun = mean,
+               geom = "line") +
+  labs(
+    title =
+      "Mean trajectory for the ambulance diversion hours of each EMS level",
+    x = "Year",
+    y = "Mean ambulance diversion hours",
+    colour = "Level") +
+  theme_classic() +
+  theme(plot.title = element_text(size = 11, hjust = 0.5))
+
+# Analysis of response profile model for emslevel
+emslevel_model <- gls(diverthours ~ emslevel * year,
+                      corr=corSymm(form = ~ time | id),
+                      weights = varIdent(form = ~ 1 | year),
+                      method = "REML",
+                      data = ambulance)
+Anova(emslevel_model)
+
+# emslevel:year p-value < 0.05 so we have sufficient evidence to conclude
+# that the patterns of change differ between the groups and thus we will
+# include emslevel:year interaction term in the model
+
+# Check for possible interaction term involving year and region
+ambulance %>%
+  ggplot(aes(x = year,
+             y = diverthours,
+             colour = region)) +
+  stat_summary(aes(group = region),
+               fun = mean,
+               geom = "line") +
+  labs(
+    title =
+      "Mean trajectory for the ambulance diversion hours of each region",
+    x = "Year",
+    y = "Mean ambulance diversion hours",
+    colour = "Region") +
+  theme_classic() +
+  theme(plot.title = element_text(size = 11, hjust = 0.5))
+
+# To limit overfitting, a region:year interaction term will not be
+# included in the model
+
+```
+
+## Fit the model
+
+```{r}
+
+# Fit marginal model using GEE, putting everything together (treating
+# diverthours as a count variable and using the exchangeable working
+# correlation structure due to the presence of overdispersion
+
+model <- geeglm(diverthours ~ year + trauma + emslevel + stations +
+                  admitrate + region + emslevel:year,
+                data = ambulance,
+                id = id,
+                family = poisson("log"),
+                corstr = "exch",
+                scale.fix = FALSE)
+summary(model)
+```
