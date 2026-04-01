@@ -6,3 +6,5 @@ CHL5222 Final Project Group B
 - **gee_fit.rds** is the final model described in the results.
 - **ambulance.pdf** contains a data dictionary and introduction to the data.
 - **ambulance.txt** is the raw dataset (not cleaned).
+- **Figures.R** contains code to create all figures.
+- **ResultsTable.R** contains code to create Figure 2.
