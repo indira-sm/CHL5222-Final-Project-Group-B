@@ -1,0 +1,451 @@
+"year","id","trauma","emslevel","stations","diverthours","admitrate","region","time"
+2013,106010735,"0/Level III","Standby/Basic",12,79,0.153299372112309,"San Francisco Bay Area",1
+2014,106010735,"0/Level III","Standby/Basic",12,168,0.153257371488214,"San Francisco Bay Area",2
+2015,106010735,"0/Level III","Standby/Basic",12,94,0.0295423023578363,"San Francisco Bay Area",3
+2013,106010739,"0/Level III","Standby/Basic",22,43,0.117496372869061,"San Francisco Bay Area",1
+2014,106010739,"0/Level III","Standby/Basic",22,182,0.124923959329104,"San Francisco Bay Area",2
+2015,106010739,"0/Level III","Standby/Basic",22,57,0.133253592987833,"San Francisco Bay Area",3
+2013,106010846,"Level II/Level I","Standby/Basic",52,380,0.104487499728491,"San Francisco Bay Area",1
+2014,106010846,"Level II/Level I","Standby/Basic",52,315,0.104485993657505,"San Francisco Bay Area",2
+2015,106010846,"Level II/Level I","Standby/Basic",57,56,0.103706942489786,"San Francisco Bay Area",3
+2013,106010856,"0/Level III","Standby/Basic",32,76,0.120031577594595,"San Francisco Bay Area",1
+2013,106010937,"0/Level III","Standby/Basic",31,189,0.193332691937656,"San Francisco Bay Area",1
+2014,106010937,"0/Level III","Standby/Basic",31,62,0.180346536864199,"San Francisco Bay Area",2
+2015,106010937,"0/Level III","Standby/Basic",31,48,0.193561506025386,"San Francisco Bay Area",3
+2013,106010967,"0/Level III","Standby/Basic",17,5,0.129631740964542,"San Francisco Bay Area",1
+2014,106013619,"0/Level III","Standby/Basic",12,37,0.11988685122207,"San Francisco Bay Area",1
+2014,106014050,"0/Level III","Standby/Basic",18,9,0.182344334254593,"San Francisco Bay Area",1
+2015,106014050,"0/Level III","Standby/Basic",18,7,0.171418083934908,"San Francisco Bay Area",2
+2013,106014233,"0/Level III","Standby/Basic",22,268,0.142909947789123,"San Francisco Bay Area",1
+2014,106014233,"Level II/Level I","Standby/Basic",22,204,0.109376418262685,"San Francisco Bay Area",2
+2014,106014326,"0/Level III","Standby/Basic",48,48,0.134815288661443,"San Francisco Bay Area",1
+2014,106070904,"0/Level III","Standby/Basic",25,3528,0.0731253044499842,"San Francisco Bay Area",1
+2014,106070988,"Level II/Level I","Standby/Basic",44,65,0.217902226302502,"San Francisco Bay Area",1
+2015,106141338,"0/Level III","Standby/Basic",2,688,0.00344530577088717,"Southern San Joaquin Valley",1
+2013,106150722,"0/Level III","Standby/Basic",36,55,0.127887551126217,"Southern San Joaquin Valley",1
+2013,106150736,"Level II/Level I","Standby/Basic",32,11,0.0827282867184376,"Southern San Joaquin Valley",1
+2013,106150761,"0/Level III","Standby/Basic",16,11,0.157724583849223,"Southern San Joaquin Valley",1
+2013,106150788,"0/Level III","Standby/Basic",22,40,0.163123638192078,"Southern San Joaquin Valley",1
+2013,106154101,"0/Level III","Standby/Basic",9,110,0.329147336426172,"Southern San Joaquin Valley",1
+2013,106154108,"0/Level III","Standby/Basic",19,31,0.106591218185351,"Southern San Joaquin Valley",1
+2013,106190017,"0/Level III","Standby/Basic",8,226,0.187065248634665,"Los Angeles County",1
+2014,106190017,"0/Level III","Standby/Basic",8,311,0.211253546285594,"Los Angeles County",2
+2015,106190017,"0/Level III","Standby/Basic",8,641,0.182597967216967,"Los Angeles County",3
+2015,106190034,"Level II/Level I","Standby/Basic",26,305,0.0972092023220813,"Los Angeles County",1
+2013,106190053,"Level II/Level I","Standby/Basic",26,1532,0.114082122195569,"Los Angeles County",1
+2014,106190053,"Level II/Level I","Standby/Basic",26,2204,0.114605183955639,"Los Angeles County",2
+2015,106190053,"Level II/Level I","Standby/Basic",26,955,0.121094385311817,"Los Angeles County",3
+2013,106190081,"0/Level III","Standby/Basic",17,572,0.203732503888025,"Los Angeles County",1
+2014,106190081,"0/Level III","Standby/Basic",16,471,0.106062684315205,"Los Angeles County",2
+2015,106190081,"0/Level III","Standby/Basic",17,814,0.189630061170987,"Los Angeles County",3
+2013,106190110,"0/Level III","Standby/Basic",27,185,0.251486465341887,"Los Angeles County",1
+2014,106190110,"0/Level III","Standby/Basic",27,254,0.284296671147308,"Los Angeles County",2
+2015,106190110,"0/Level III","Standby/Basic",17,631,0.313127958149963,"Los Angeles County",3
+2013,106190125,"Level II/Level I","Standby/Basic",27,894,0.13020739133056,"Los Angeles County",1
+2014,106190125,"Level II/Level I","Standby/Basic",35,1323,0.104975872162012,"Los Angeles County",2
+2015,106190125,"Level II/Level I","Standby/Basic",35,1458,0.140837358706365,"Los Angeles County",3
+2013,106190148,"0/Level III","Standby/Basic",44,1,0.218481465219846,"Los Angeles County",1
+2014,106190148,"0/Level III","Standby/Basic",44,1,0.194732151089529,"Los Angeles County",2
+2015,106190148,"0/Level III","Standby/Basic",36,2,0.20566141903535,"Los Angeles County",3
+2013,106190159,"0/Level III","Standby/Basic",8,75,0.189237744888357,"Los Angeles County",1
+2014,106190159,"0/Level III","Standby/Basic",8,1096,0.211627547869055,"Los Angeles County",2
+2015,106190159,"0/Level III","Standby/Basic",8,1292,0.237186563633496,"Los Angeles County",3
+2013,106190170,"0/Level III","Standby/Basic",39,101,0.0687887332438668,"Los Angeles County",1
+2014,106190170,"0/Level III","Standby/Basic",39,19,0.0922299346317137,"Los Angeles County",2
+2015,106190170,"0/Level III","Standby/Basic",39,5640,0.0942174248265227,"Los Angeles County",3
+2013,106190197,"0/Level III","Standby/Basic",14,84,0.114310363420684,"Los Angeles County",1
+2014,106190197,"0/Level III","Standby/Basic",14,224,0.0889639335404566,"Los Angeles County",2
+2015,106190197,"0/Level III","Standby/Basic",14,466,0.0758995655856397,"Los Angeles County",3
+2013,106190200,"0/Level III","Standby/Basic",12,202,0.187587851940197,"Los Angeles County",1
+2014,106190200,"0/Level III","Standby/Basic",12,168,0.176674179008371,"Los Angeles County",2
+2015,106190200,"0/Level III","Standby/Basic",12,316,0.159879827704782,"Los Angeles County",3
+2013,106190240,"0/Level III","Standby/Basic",14,705,0.133110747133678,"Los Angeles County",1
+2014,106190240,"0/Level III","Standby/Basic",14,1352,0.122320890737034,"Los Angeles County",2
+2015,106190240,"0/Level III","Standby/Basic",14,1170,0.11813397653766,"Los Angeles County",3
+2013,106190243,"0/Level III","Standby/Basic",22,2,0.13326714525737,"Los Angeles County",1
+2014,106190243,"0/Level III","Standby/Basic",22,879,0.12015374659267,"Los Angeles County",2
+2015,106190243,"0/Level III","Standby/Basic",22,2440,0.106840235747028,"Los Angeles County",3
+2013,106190256,"0/Level III","Standby/Basic",8,18,0.12048884043835,"Los Angeles County",1
+2014,106190256,"0/Level III","Standby/Basic",8,2,0.127285869172389,"Los Angeles County",2
+2015,106190256,"0/Level III","Standby/Basic",8,32,0.130286445376359,"Los Angeles County",3
+2013,106190280,"0/Level III","Standby/Basic",8,4,0.202368252613612,"Los Angeles County",1
+2013,106190298,"0/Level III","Standby/Basic",23,108,0.115019011406844,"Los Angeles County",1
+2014,106190298,"0/Level III","Standby/Basic",23,49,0.129911982812392,"Los Angeles County",2
+2015,106190298,"0/Level III","Standby/Basic",23,511,0.134071882671367,"Los Angeles County",3
+2013,106190315,"0/Level III","Standby/Basic",21,522,0.237417407618892,"Los Angeles County",1
+2014,106190315,"0/Level III","Standby/Basic",21,427,0.232293634576088,"Los Angeles County",2
+2015,106190315,"0/Level III","Standby/Basic",21,1456,0.225835876925236,"Los Angeles County",3
+2013,106190323,"0/Level III","Standby/Basic",36,515,0.285075553715587,"Los Angeles County",1
+2014,106190323,"0/Level III","Standby/Basic",36,889,0.240954373572375,"Los Angeles County",2
+2015,106190323,"0/Level III","Standby/Basic",39,434,0.180901344109637,"Los Angeles County",3
+2013,106190328,"0/Level III","Standby/Basic",7,22,0.306418689045135,"Los Angeles County",1
+2014,106190328,"0/Level III","Standby/Basic",7,33,0.283763601450821,"Los Angeles County",2
+2015,106190328,"0/Level III","Standby/Basic",7,42,0.27448380375071,"Los Angeles County",3
+2013,106190352,"0/Level III","Standby/Basic",9,203,0.111829571040933,"Los Angeles County",1
+2014,106190352,"0/Level III","Standby/Basic",9,170,0.122491023603508,"Los Angeles County",2
+2015,106190352,"0/Level III","Standby/Basic",9,587,0.127512799784425,"Los Angeles County",3
+2013,106190382,"0/Level III","Standby/Basic",20,123,0.205732902917264,"Los Angeles County",1
+2014,106190382,"0/Level III","Standby/Basic",20,125,0.175192854242793,"Los Angeles County",2
+2015,106190382,"0/Level III","Standby/Basic",20,277,0.166004672897196,"Los Angeles County",3
+2013,106190385,"Level II/Level I","Standby/Basic",32,540,0.110434548413916,"Los Angeles County",1
+2014,106190385,"Level II/Level I","Standby/Basic",32,512,0.097803729015991,"Los Angeles County",2
+2015,106190385,"Level II/Level I","Standby/Basic",32,776,0.0881774979446973,"Los Angeles County",3
+2013,106190392,"0/Level III","Standby/Basic",12,1271,0.172062448644207,"Los Angeles County",1
+2014,106190392,"0/Level III","Standby/Basic",12,1614,0.143390393980928,"Los Angeles County",2
+2015,106190392,"0/Level III","Standby/Basic",12,2003,0.139297362247525,"Los Angeles County",3
+2013,106190400,"Level II/Level I","Standby/Basic",34,322,0.272998566236538,"Los Angeles County",1
+2014,106190400,"Level II/Level I","Standby/Basic",50,385,0.239867591113453,"Los Angeles County",2
+2015,106190400,"Level II/Level I","Standby/Basic",50,571,0.255398746882414,"Los Angeles County",3
+2013,106190413,"0/Level III","Standby/Basic",12,116,0.259617145997435,"Los Angeles County",1
+2014,106190413,"0/Level III","Standby/Basic",12,183,0.263842226973254,"Los Angeles County",2
+2015,106190413,"0/Level III","Standby/Basic",12,327,0.218875347115088,"Los Angeles County",3
+2014,106190422,"0/Level III","Standby/Basic",29,183,0.199565995933109,"Los Angeles County",1
+2015,106190422,"0/Level III","Standby/Basic",29,357,0.201499869414354,"Los Angeles County",2
+2013,106190429,"0/Level III","Standby/Basic",45,4157,0.1226409819107,"Los Angeles County",1
+2014,106190429,"0/Level III","Standby/Basic",45,3349,0.124417991411135,"Los Angeles County",2
+2015,106190429,"0/Level III","Standby/Basic",45,3185,0.11123414943755,"Los Angeles County",3
+2013,106190431,"0/Level III","Standby/Basic",37,463,0.11453219245336,"Los Angeles County",1
+2014,106190431,"0/Level III","Standby/Basic",37,682,0.103770475594081,"Los Angeles County",2
+2013,106190432,"0/Level III","Standby/Basic",34,1636,0.106567823230601,"Los Angeles County",1
+2014,106190432,"0/Level III","Standby/Basic",34,1448,0.0780657235832673,"Los Angeles County",2
+2015,106190432,"0/Level III","Standby/Basic",32,2473,0.0667009682398615,"Los Angeles County",3
+2013,106190434,"0/Level III","Standby/Basic",53,871,0.0899369301860872,"Los Angeles County",1
+2014,106190434,"0/Level III","Standby/Basic",53,596,0.0946977078867285,"Los Angeles County",2
+2015,106190434,"0/Level III","Standby/Basic",53,1322,0.084226059565532,"Los Angeles County",3
+2013,106190470,"0/Level III","Standby/Basic",29,359,0.178301610541728,"Los Angeles County",1
+2014,106190470,"0/Level III","Standby/Basic",29,689,0.172694581077171,"Los Angeles County",2
+2015,106190470,"0/Level III","Standby/Basic",29,181,0.176368785399622,"Los Angeles County",3
+2013,106190475,"0/Level III","Standby/Basic",20,1331,0.165821638750566,"Los Angeles County",1
+2014,106190475,"0/Level III","Standby/Basic",21,540,0.169026474530831,"Los Angeles County",2
+2015,106190475,"0/Level III","Standby/Basic",21,334,0.173349503524596,"Los Angeles County",3
+2013,106190500,"0/Level III","Standby/Basic",15,584,0.129268851707541,"Los Angeles County",1
+2014,106190500,"0/Level III","Standby/Basic",18,250,0.0956147252474222,"Los Angeles County",2
+2015,106190500,"0/Level III","Standby/Basic",18,642,0.0880617035546613,"Los Angeles County",3
+2013,106190517,"0/Level III","Standby/Basic",15,576,0.166458407711532,"Los Angeles County",1
+2014,106190517,"0/Level III","Standby/Basic",15,218,0.223829963998892,"Los Angeles County",2
+2015,106190517,"0/Level III","Standby/Basic",15,375,0.147374351510599,"Los Angeles County",3
+2013,106190521,"0/Level III","Standby/Basic",10,97,0.215434174460991,"Los Angeles County",1
+2014,106190521,"0/Level III","Standby/Basic",10,68,0.126648208558349,"Los Angeles County",2
+2015,106190521,"0/Level III","Standby/Basic",10,178,0.0994449037439471,"Los Angeles County",3
+2013,106190522,"0/Level III","Standby/Basic",15,643,0.0935047587243279,"Los Angeles County",1
+2014,106190522,"0/Level III","Standby/Basic",15,495,0.148218776773623,"Los Angeles County",2
+2015,106190522,"0/Level III","Standby/Basic",15,635,0.15514514129366,"Los Angeles County",3
+2013,106190524,"0/Level III","Standby/Basic",8,56,0.288138160884714,"Los Angeles County",1
+2014,106190524,"0/Level III","Standby/Basic",8,21,0.273033707865169,"Los Angeles County",2
+2013,106190525,"Level II/Level I","Standby/Basic",53,1901,0.232837660836736,"Los Angeles County",1
+2014,106190525,"Level II/Level I","Standby/Basic",53,1709,0.160036983976997,"Los Angeles County",2
+2015,106190525,"Level II/Level I","Standby/Basic",53,1955,0.148967827757797,"Los Angeles County",3
+2013,106190529,"0/Level III","Standby/Basic",38,57,0.189704012669239,"Los Angeles County",1
+2013,106190534,"0/Level III","Standby/Basic",16,172,0.174042394942358,"Los Angeles County",1
+2014,106190534,"0/Level III","Standby/Basic",16,19,0.18194434299905,"Los Angeles County",2
+2015,106190534,"0/Level III","Standby/Basic",16,64,0.168505338078292,"Los Angeles County",3
+2013,106190547,"0/Level III","Standby/Basic",6,572,0.134013511650352,"Los Angeles County",1
+2014,106190547,"0/Level III","Standby/Basic",6,374,0.129850463751656,"Los Angeles County",2
+2015,106190547,"0/Level III","Standby/Basic",6,411,0.135224719101124,"Los Angeles County",3
+2014,106190555,"Level II/Level I","Standby/Basic",51,97,0.24382903940915,"Los Angeles County",1
+2015,106190555,"Level II/Level I","Standby/Basic",51,1908,0.265323121775145,"Los Angeles County",2
+2013,106190568,"Level II/Level I","Standby/Basic",25,960,0.204586903410068,"Los Angeles County",1
+2014,106190568,"Level II/Level I","Standby/Basic",25,837,0.170398294783941,"Los Angeles County",2
+2015,106190568,"Level II/Level I","Standby/Basic",25,643,0.173676740402257,"Los Angeles County",3
+2014,106190570,"0/Level III","Standby/Basic",4,1103,0.318830539005127,"Los Angeles County",1
+2015,106190570,"0/Level III","Standby/Basic",4,1291,0.286060279870829,"Los Angeles County",2
+2014,106190587,"0/Level III","Standby/Basic",7,217,0.335974643423138,"Los Angeles County",1
+2015,106190587,"0/Level III","Standby/Basic",7,707,0.331116420223413,"Los Angeles County",2
+2013,106190630,"0/Level III","Standby/Basic",50,277,0.116902660110196,"Los Angeles County",1
+2014,106190630,"0/Level III","Standby/Basic",50,113,0.0975601743358374,"Los Angeles County",2
+2015,106190630,"0/Level III","Standby/Basic",50,373,0.107048295396236,"Los Angeles County",3
+2013,106190631,"0/Level III","Standby/Basic",61,156,0.158175313564954,"Los Angeles County",1
+2014,106190631,"0/Level III","Standby/Basic",61,8,0.153956891023544,"Los Angeles County",2
+2015,106190631,"0/Level III","Standby/Basic",61,628,0.155460840404971,"Los Angeles County",3
+2013,106190636,"0/Level III","Standby/Basic",30,307,0.162842462577211,"Los Angeles County",1
+2014,106190636,"0/Level III","Standby/Basic",30,359,0.15970858303537,"Los Angeles County",2
+2015,106190636,"0/Level III","Standby/Basic",30,517,0.156170535979657,"Los Angeles County",3
+2013,106190673,"0/Level III","Standby/Basic",8,5,0.211291479235935,"Los Angeles County",1
+2014,106190673,"0/Level III","Standby/Basic",8,3,0.181683285849953,"Los Angeles County",2
+2015,106190673,"0/Level III","Standby/Basic",8,14,0.147957979225685,"Los Angeles County",3
+2013,106190680,"0/Level III","Standby/Basic",16,149,0.100669714042734,"Los Angeles County",1
+2014,106190680,"0/Level III","Standby/Basic",16,258,0.0675751920489562,"Los Angeles County",2
+2015,106190680,"0/Level III","Standby/Basic",16,355,0.096584444820992,"Los Angeles County",3
+2013,106190687,"0/Level III","Standby/Basic",21,5,0.174537182303106,"Los Angeles County",1
+2014,106190687,"0/Level III","Standby/Basic",21,660,0.167084676937776,"Los Angeles County",2
+2015,106190687,"0/Level III","Standby/Basic",21,982,0.181682470932066,"Los Angeles County",3
+2013,106190696,"0/Level III","Standby/Basic",7,942,0.191536748329621,"Los Angeles County",1
+2014,106190696,"0/Level III","Standby/Basic",7,203,0.190807799442897,"Los Angeles County",2
+2015,106190696,"0/Level III","Standby/Basic",7,1002,0.174138434579439,"Los Angeles County",3
+2014,106190754,"Level II/Level I","Standby/Basic",46,3504,0.128393289197309,"Los Angeles County",1
+2015,106190754,"Level II/Level I","Standby/Basic",46,2672,0.123463411191871,"Los Angeles County",2
+2014,106190756,"0/Level III","Standby/Basic",27,1084,0.233451476793249,"Los Angeles County",1
+2015,106190756,"0/Level III","Standby/Basic",27,2292,0.202007979593172,"Los Angeles County",2
+2013,106190758,"0/Level III","Standby/Basic",38,22,0.139675361382541,"Los Angeles County",1
+2014,106190758,"0/Level III","Standby/Basic",38,91,0.145027352512889,"Los Angeles County",2
+2015,106190758,"0/Level III","Standby/Basic",28,287,0.186054973544171,"Los Angeles County",3
+2015,106190766,"0/Level III","Standby/Basic",8,4,0.819800442134194,"Los Angeles County",1
+2013,106190796,"Level II/Level I","Comprehensive",33,4,0.211990670220868,"Los Angeles County",1
+2014,106190796,"Level II/Level I","Comprehensive",33,3242,0.203982250540448,"Los Angeles County",2
+2015,106190796,"Level II/Level I","Comprehensive",33,3846,0.211575655322826,"Los Angeles County",3
+2013,106190812,"0/Level III","Standby/Basic",27,204,0.12634917552632,"Los Angeles County",1
+2014,106190812,"0/Level III","Standby/Basic",27,341,0.128164480175998,"Los Angeles County",2
+2015,106190812,"0/Level III","Standby/Basic",27,552,0.11083171860902,"Los Angeles County",3
+2013,106190818,"0/Level III","Standby/Basic",13,797,0.167205129479596,"Los Angeles County",1
+2014,106190818,"0/Level III","Standby/Basic",13,290,0.165458827792373,"Los Angeles County",2
+2015,106190818,"0/Level III","Standby/Basic",13,446,0.163421017610788,"Los Angeles County",3
+2013,106190859,"0/Level III","Standby/Basic",30,163,0.147090823084201,"Los Angeles County",1
+2014,106190859,"0/Level III","Standby/Basic",30,79,0.143566404633844,"Los Angeles County",2
+2015,106190859,"0/Level III","Standby/Basic",36,228,0.139431262452454,"Los Angeles County",3
+2013,106190878,"0/Level III","Standby/Basic",28,2,0.158136128883065,"Los Angeles County",1
+2014,106190878,"0/Level III","Standby/Basic",28,22,0.150744383771189,"Los Angeles County",2
+2013,106190883,"0/Level III","Standby/Basic",11,60,0.203158059713189,"Los Angeles County",1
+2014,106190883,"0/Level III","Standby/Basic",11,24,0.167251461988304,"Los Angeles County",2
+2015,106190883,"0/Level III","Standby/Basic",11,72,0.157440152339499,"Los Angeles County",3
+2013,106190949,"Level II/Level I","Standby/Basic",36,429,0.153987800667511,"Los Angeles County",1
+2014,106190949,"Level II/Level I","Standby/Basic",36,259,0.145413373590267,"Los Angeles County",2
+2015,106190949,"Level II/Level I","Standby/Basic",36,562,0.155762081784387,"Los Angeles County",3
+2013,106191227,"Level II/Level I","Standby/Basic",46,2823,0.187667813533023,"Los Angeles County",1
+2014,106191227,"Level II/Level I","Standby/Basic",84,1772,0.180178464551934,"Los Angeles County",2
+2013,106191231,"0/Level III","Standby/Basic",51,87,0.145989214694978,"Los Angeles County",1
+2014,106191231,"0/Level III","Standby/Basic",51,1637,0.145954187770553,"Los Angeles County",2
+2015,106191231,"0/Level III","Standby/Basic",51,1659,0.136713592482724,"Los Angeles County",3
+2013,106191450,"0/Level III","Standby/Basic",27,570,0.119549641760491,"Los Angeles County",1
+2014,106191450,"0/Level III","Standby/Basic",27,1128,0.131881336838152,"Los Angeles County",2
+2015,106191450,"0/Level III","Standby/Basic",27,1203,0.131212300413956,"Los Angeles County",3
+2013,106196035,"0/Level III","Standby/Basic",40,2606,0.0960204454180358,"Los Angeles County",1
+2014,106196035,"0/Level III","Standby/Basic",40,3013,0.0931103696032933,"Los Angeles County",2
+2015,106196035,"0/Level III","Standby/Basic",40,3857,0.0880122688932436,"Los Angeles County",3
+2013,106196403,"0/Level III","Standby/Basic",63,1258,0.106496623200102,"Los Angeles County",1
+2014,106196403,"0/Level III","Standby/Basic",63,1612,0.106585806777096,"Los Angeles County",2
+2015,106196403,"0/Level III","Standby/Basic",63,2777,0.101382779449835,"Los Angeles County",3
+2013,106196405,"0/Level III","Standby/Basic",35,265,0.121822396169776,"Los Angeles County",1
+2014,106196405,"0/Level III","Standby/Basic",35,265,0.100141574793662,"Los Angeles County",2
+2015,106196405,"0/Level III","Standby/Basic",35,22,0.0863184141012664,"Los Angeles County",3
+2013,106211006,"0/Level III","Standby/Basic",22,169,0.176479160594579,"San Francisco Bay Area",1
+2014,106211006,"0/Level III","Standby/Basic",22,73,0.179497045485777,"San Francisco Bay Area",2
+2015,106211006,"0/Level III","Standby/Basic",22,187,0.168159871244635,"San Francisco Bay Area",3
+2013,106214034,"0/Level III","Standby/Basic",9,124,0.100997419264839,"San Francisco Bay Area",1
+2014,106214034,"0/Level III","Standby/Basic",9,60,0.0896667131501883,"San Francisco Bay Area",2
+2015,106214034,"0/Level III","Standby/Basic",9,37,0.0920698924731183,"San Francisco Bay Area",3
+2014,106240924,"0/Level III","Standby/Basic",9,7,0.0251570280209588,"Northern San Joaquin Valley",1
+2015,106274043,"Level II/Level I","Standby/Basic",19,42,0.0791370738636364,"Central Coast",1
+2013,106300032,"0/Level III","Standby/Basic",31,11,0.104579744360625,"Orange County",1
+2014,106300032,"0/Level III","Standby/Basic",31,2,0.0840559702029136,"Orange County",2
+2015,106300032,"0/Level III","Standby/Basic",31,12,0.0816726094003242,"Orange County",3
+2013,106300225,"0/Level III","Standby/Basic",14,768,0.247875548245614,"Orange County",1
+2014,106300225,"0/Level III","Standby/Basic",14,161,0.231853735474941,"Orange County",2
+2015,106300225,"0/Level III","Standby/Basic",14,613,0.206877097128604,"Orange County",3
+2013,106301098,"0/Level III","Standby/Basic",21,362,0.211971643560524,"Orange County",1
+2014,106301098,"0/Level III","Standby/Basic",21,184,0.188819180446393,"Orange County",2
+2015,106301098,"0/Level III","Standby/Basic",31,889,0.242450685466278,"Orange County",3
+2013,106301140,"0/Level III","Standby/Basic",8,22,0.119775280898876,"Orange County",1
+2014,106301140,"0/Level III","Standby/Basic",8,5,0.111874169251218,"Orange County",2
+2015,106301140,"0/Level III","Standby/Basic",8,72,0.0955339805825243,"Orange County",3
+2013,106301175,"0/Level III","Standby/Basic",25,387,0.246096600029184,"Orange County",1
+2014,106301175,"0/Level III","Standby/Basic",25,50,0.128070557491289,"Orange County",2
+2015,106301175,"0/Level III","Standby/Basic",25,167,0.202180318208603,"Orange County",3
+2013,106301188,"0/Level III","Standby/Basic",11,357,0.161568373298769,"Orange County",1
+2014,106301188,"0/Level III","Standby/Basic",11,197,0.148260504744078,"Orange County",2
+2015,106301188,"0/Level III","Standby/Basic",11,372,0.136259858862599,"Orange County",3
+2013,106301205,"0/Level III","Standby/Basic",56,40,0.15233330458035,"Orange County",1
+2014,106301205,"0/Level III","Standby/Basic",56,54,0.158125564079422,"Orange County",2
+2015,106301205,"0/Level III","Standby/Basic",56,197,0.158030769230769,"Orange County",3
+2013,106301248,"0/Level III","Standby/Basic",20,492,0.205595143837424,"Orange County",1
+2014,106301248,"0/Level III","Standby/Basic",20,476,0.18421302299105,"Orange County",2
+2015,106301248,"0/Level III","Standby/Basic",20,646,0.186056782334385,"Orange County",3
+2013,106301258,"0/Level III","Standby/Basic",10,220,0.0889824561403509,"Orange County",1
+2014,106301258,"0/Level III","Standby/Basic",10,158,0.0811025090943009,"Orange County",2
+2015,106301258,"0/Level III","Standby/Basic",10,119,0.0383247728170684,"Orange County",3
+2013,106301262,"Level II/Level I","Standby/Basic",33,392,0.227845745918035,"Orange County",1
+2014,106301262,"Level II/Level I","Standby/Basic",33,683,0.237960405156538,"Orange County",2
+2015,106301262,"Level II/Level I","Standby/Basic",33,554,0.225921183667663,"Orange County",3
+2013,106301279,"Level II/Level I","Comprehensive",36,826,0.259957514604355,"Orange County",1
+2014,106301279,"Level II/Level I","Comprehensive",36,320,0.250608382154123,"Orange County",2
+2015,106301279,"Level II/Level I","Comprehensive",36,1092,0.249829714772243,"Orange County",3
+2013,106301297,"0/Level III","Standby/Basic",20,2,0.0997599039615846,"Orange County",1
+2014,106301297,"0/Level III","Standby/Basic",20,2,0.0862030741945019,"Orange County",2
+2013,106301317,"0/Level III","Standby/Basic",31,308,0.232629094467791,"Orange County",1
+2014,106301317,"0/Level III","Standby/Basic",31,308,0.207787876261152,"Orange County",2
+2015,106301317,"0/Level III","Standby/Basic",31,794,0.206528158050142,"Orange County",3
+2013,106301325,"0/Level III","Standby/Basic",10,76,0.125165609092811,"Orange County",1
+2014,106301325,"0/Level III","Standby/Basic",10,112,0.11297477127807,"Orange County",2
+2015,106301325,"0/Level III","Standby/Basic",10,159,0.0947590573338023,"Orange County",3
+2013,106301337,"0/Level III","Standby/Basic",11,8,0.25160031225605,"Orange County",1
+2014,106301337,"0/Level III","Standby/Basic",12,48,0.236637835440231,"Orange County",2
+2015,106301337,"0/Level III","Standby/Basic",12,50,0.217963066592054,"Orange County",3
+2013,106301340,"0/Level III","Standby/Basic",53,17,0.135403880726551,"Orange County",1
+2014,106301340,"0/Level III","Standby/Basic",53,434,0.124451571520205,"Orange County",2
+2015,106301340,"0/Level III","Standby/Basic",53,379,0.148597697693936,"Orange County",3
+2013,106301342,"0/Level III","Standby/Basic",36,19,0.120751623683713,"Orange County",1
+2014,106301342,"0/Level III","Standby/Basic",36,39,0.114125067694562,"Orange County",2
+2015,106301342,"0/Level III","Standby/Basic",36,193,0.118216331883758,"Orange County",3
+2013,106301566,"Level II/Level I","Standby/Basic",20,364,0.223688801023375,"Orange County",1
+2014,106301566,"Level II/Level I","Standby/Basic",20,604,0.17472335468841,"Orange County",2
+2015,106301566,"Level II/Level I","Standby/Basic",20,469,0.218900052455312,"Orange County",3
+2013,106304045,"0/Level III","Standby/Basic",14,114,0.146711979609176,"Orange County",1
+2014,106304045,"0/Level III","Standby/Basic",14,111,0.130602075251522,"Orange County",2
+2015,106304045,"0/Level III","Standby/Basic",14,611,0.103502804630624,"Orange County",3
+2013,106304113,"0/Level III","Standby/Basic",46,385,0.0633904604583936,"Orange County",1
+2014,106304113,"0/Level III","Standby/Basic",33,673,0.07981220657277,"Orange County",2
+2015,106304113,"0/Level III","Standby/Basic",45,602,0.0831932773109244,"Orange County",3
+2013,106304306,"0/Level III","Standby/Basic",36,44,0.138369367022662,"Orange County",1
+2014,106304306,"0/Level III","Standby/Basic",36,11,0.138368233209374,"Orange County",2
+2015,106304306,"0/Level III","Standby/Basic",36,302,0.133885878227606,"Orange County",3
+2013,106304409,"0/Level III","Standby/Basic",36,109,0.127789005658852,"Orange County",1
+2014,106304409,"0/Level III","Standby/Basic",36,48,0.118635750214698,"Orange County",2
+2015,106304409,"0/Level III","Standby/Basic",36,715,0.11737926204196,"Orange County",3
+2014,106314024,"0/Level III","Standby/Basic",73,5,0.0839440223551461,"Superior California",1
+2015,106314024,"0/Level III","Standby/Basic",61,1,0.0840716618748655,"Superior California",2
+2015,106331164,"Level II/Level I","Comprehensive",28,678,0.155358160612758,"Inland Empire",1
+2015,106331312,"Level II/Level I","Standby/Basic",50,45,0.139287203967187,"Inland Empire",1
+2015,106334001,"Level II/Level I","Standby/Basic",33,32,0.130054033910937,"Inland Empire",1
+2014,106334487,"Level II/Level I","Standby/Basic",40,17,0.117664527034744,"Inland Empire",1
+2013,106341006,"Level II/Level I","Comprehensive",65,21,0.246602297930528,"Superior California",1
+2013,106350784,"0/Level III","Standby/Basic",18,2,0.0940686659023713,"Central Coast",1
+2014,106350784,"0/Level III","Standby/Basic",18,3,0.0846051949547889,"Central Coast",2
+2013,106361246,"Level II/Level I","Standby/Basic",77,18,0.267155604854064,"Inland Empire",1
+2014,106361246,"Level II/Level I","Standby/Basic",77,10,0.245251275371757,"Inland Empire",2
+2015,106361246,"Level II/Level I","Standby/Basic",77,123,0.174948624272177,"Inland Empire",3
+2015,106361318,"0/Level III","Standby/Basic",31,236,0.131682910981157,"Inland Empire",1
+2014,106364231,"Level II/Level I","Standby/Basic",43,89,0.167952859535774,"Inland Empire",1
+2013,106370652,"0/Level III","Standby/Basic",16,689,0.187951608241463,"San Diego - Imperial",1
+2014,106370652,"0/Level III","Standby/Basic",16,435,0.186858961763666,"San Diego - Imperial",2
+2013,106370658,"0/Level III","Standby/Basic",24,228,0.151549778603057,"San Diego - Imperial",1
+2014,106370658,"0/Level III","Standby/Basic",24,249,0.146641347297349,"San Diego - Imperial",2
+2015,106370658,"0/Level III","Standby/Basic",24,919,0.136773741212938,"San Diego - Imperial",3
+2013,106370689,"0/Level III","Standby/Basic",8,578,0.0833333333333333,"San Diego - Imperial",1
+2014,106370689,"0/Level III","Standby/Basic",8,198,0.0727977921981055,"San Diego - Imperial",2
+2015,106370689,"0/Level III","Standby/Basic",8,624,0.0674858223062382,"San Diego - Imperial",3
+2013,106370694,"Level II/Level I","Standby/Basic",52,74,0.179946952533569,"San Diego - Imperial",1
+2014,106370694,"Level II/Level I","Standby/Basic",52,176,0.165570026541572,"San Diego - Imperial",2
+2015,106370694,"Level II/Level I","Standby/Basic",52,741,0.157781657043105,"San Diego - Imperial",3
+2013,106370714,"0/Level III","Standby/Basic",59,1978,0.200182753156866,"San Diego - Imperial",1
+2014,106370714,"0/Level III","Standby/Basic",62,2640,0.187302081235928,"San Diego - Imperial",2
+2015,106370714,"0/Level III","Standby/Basic",62,3267,0.185008272651642,"San Diego - Imperial",3
+2013,106370744,"Level II/Level I","Standby/Basic",52,62,0.237230589997504,"San Diego - Imperial",1
+2014,106370744,"Level II/Level I","Standby/Basic",52,34,0.21351367949151,"San Diego - Imperial",2
+2015,106370744,"Level II/Level I","Standby/Basic",52,290,0.195549726901959,"San Diego - Imperial",3
+2013,106370759,"0/Level III","Standby/Basic",20,4,0.201314783672221,"San Diego - Imperial",1
+2014,106370759,"0/Level III","Standby/Basic",20,71,0.184588311568028,"San Diego - Imperial",2
+2013,106370771,"Level II/Level I","Standby/Basic",23,4,0.223288175075093,"San Diego - Imperial",1
+2014,106370771,"Level II/Level I","Standby/Basic",19,5,0.221048330609386,"San Diego - Imperial",2
+2013,106370780,"0/Level III","Standby/Basic",46,124,0.126988140693352,"San Diego - Imperial",1
+2014,106370780,"0/Level III","Standby/Basic",47,32,0.138450107325665,"San Diego - Imperial",2
+2015,106370780,"0/Level III","Standby/Basic",47,1022,0.117074540836264,"San Diego - Imperial",3
+2013,106370782,"Level II/Level I","Comprehensive",36,971,0.204994356659142,"San Diego - Imperial",1
+2014,106370782,"Level II/Level I","Comprehensive",36,1091,0.171248435399379,"San Diego - Imperial",2
+2015,106370782,"Level II/Level I","Comprehensive",35,1485,0.197078866270237,"San Diego - Imperial",3
+2013,106370875,"0/Level III","Standby/Basic",44,480,0.171116035313566,"San Diego - Imperial",1
+2014,106370875,"0/Level III","Standby/Basic",44,1025,0.15911673716775,"San Diego - Imperial",2
+2015,106370875,"0/Level III","Standby/Basic",44,2145,0.15793046455345,"San Diego - Imperial",3
+2013,106370977,"0/Level III","Standby/Basic",20,312,0.135991537895511,"San Diego - Imperial",1
+2014,106370977,"0/Level III","Standby/Basic",17,563,0.13938097133758,"San Diego - Imperial",2
+2015,106370977,"0/Level III","Standby/Basic",17,8,0.129761006289308,"San Diego - Imperial",3
+2014,106371394,"0/Level III","Standby/Basic",38,6,0.148635386484718,"San Diego - Imperial",1
+2015,106371394,"0/Level III","Standby/Basic",38,26,0.144926924051702,"San Diego - Imperial",2
+2013,106374141,"0/Level III","Standby/Basic",32,364,0.233349983349983,"San Diego - Imperial",1
+2014,106374141,"0/Level III","Standby/Basic",32,560,0.199315757697726,"San Diego - Imperial",2
+2015,106374141,"0/Level III","Standby/Basic",32,866,0.225011024547994,"San Diego - Imperial",3
+2013,106374382,"0/Level III","Standby/Basic",52,518,0.176285689339038,"San Diego - Imperial",1
+2014,106374382,"0/Level III","Standby/Basic",52,848,0.181768834089411,"San Diego - Imperial",2
+2013,106380857,"0/Level III","Standby/Basic",24,75,0.13930498206697,"San Francisco Bay Area",1
+2014,106380857,"0/Level III","Standby/Basic",24,80,0.12822309826252,"San Francisco Bay Area",2
+2015,106380857,"0/Level III","Standby/Basic",24,175,0.114653890632744,"San Francisco Bay Area",3
+2013,106380929,"0/Level III","Standby/Basic",19,211,0.2813091792618,"San Francisco Bay Area",1
+2014,106380929,"0/Level III","Standby/Basic",19,296,0.273058694859643,"San Francisco Bay Area",2
+2015,106380929,"0/Level III","Standby/Basic",19,921,0.283010889100328,"San Francisco Bay Area",3
+2013,106380933,"0/Level III","Standby/Basic",11,356,0.113650573115665,"San Francisco Bay Area",1
+2014,106380933,"0/Level III","Standby/Basic",11,397,0.11418731852252,"San Francisco Bay Area",2
+2015,106380933,"0/Level III","Standby/Basic",11,642,0.117465904091509,"San Francisco Bay Area",3
+2013,106380939,"Level II/Level I","Comprehensive",24,3241,0.228792667509482,"San Francisco Bay Area",1
+2014,106380939,"Level II/Level I","Comprehensive",24,3583,0.207316739606127,"San Francisco Bay Area",2
+2013,106380960,"0/Level III","Standby/Basic",19,544,0.117476157392787,"San Francisco Bay Area",1
+2014,106380960,"0/Level III","Standby/Basic",19,939,0.110318036825317,"San Francisco Bay Area",2
+2015,106380960,"0/Level III","Standby/Basic",19,672,0.102235052017835,"San Francisco Bay Area",3
+2013,106380964,"0/Level III","Standby/Basic",10,874,0.0834442964935641,"San Francisco Bay Area",1
+2014,106380964,"0/Level III","Standby/Basic",10,1157,0.0799190893586642,"San Francisco Bay Area",2
+2015,106380964,"0/Level III","Standby/Basic",12,1433,0.0853630426431041,"San Francisco Bay Area",3
+2013,106380965,"0/Level III","Standby/Basic",13,162,0.160358329378263,"San Francisco Bay Area",1
+2014,106380965,"0/Level III","Standby/Basic",13,192,0.131665685697469,"San Francisco Bay Area",2
+2013,106381154,"0/Level III","Standby/Basic",33,807,0.257462779620439,"San Francisco Bay Area",1
+2014,106381154,"0/Level III","Standby/Basic",33,1031,0.208583864309432,"San Francisco Bay Area",2
+2015,106381154,"0/Level III","Standby/Basic",29,1683,0.212444314613306,"San Francisco Bay Area",3
+2013,106382715,"0/Level III","Standby/Basic",5,1663,0.235582421173011,"San Francisco Bay Area",1
+2014,106390846,"0/Level III","Standby/Basic",13,169,0.09707011342196,"Northern San Joaquin Valley",1
+2013,106390923,"0/Level III","Standby/Basic",28,96,0.151123763859754,"Northern San Joaquin Valley",1
+2014,106390923,"0/Level III","Standby/Basic",28,51,0.146015842207418,"Northern San Joaquin Valley",2
+2015,106390923,"0/Level III","Standby/Basic",28,50,0.1487607145346,"Northern San Joaquin Valley",3
+2015,106391010,"0/Level III","Standby/Basic",25,92,0.144755858366883,"Northern San Joaquin Valley",1
+2013,106391042,"0/Level III","Standby/Basic",32,468,0.173955819565621,"Northern San Joaquin Valley",1
+2014,106391042,"0/Level III","Standby/Basic",36,777,0.17057812420225,"Northern San Joaquin Valley",2
+2015,106391042,"0/Level III","Standby/Basic",32,640,0.167699836867863,"Northern San Joaquin Valley",3
+2013,106391056,"0/Level III","Standby/Basic",14,43,0.0774739181430952,"Northern San Joaquin Valley",1
+2014,106391056,"0/Level III","Standby/Basic",14,38,0.0815889425136362,"Northern San Joaquin Valley",2
+2015,106391056,"0/Level III","Standby/Basic",14,35,0.0757092012980216,"Northern San Joaquin Valley",3
+2014,106392287,"0/Level III","Standby/Basic",11,7,0.0813456801671188,"Northern San Joaquin Valley",1
+2013,106394009,"0/Level III","Standby/Basic",10,5,0.0394522194556538,"Northern San Joaquin Valley",1
+2014,106394009,"0/Level III","Standby/Basic",10,14,0.0345884757487619,"Northern San Joaquin Valley",2
+2015,106394009,"0/Level III","Standby/Basic",11,20,0.0348328916118817,"Northern San Joaquin Valley",3
+2015,106400466,"0/Level III","Standby/Basic",14,1,0.0744830277019118,"Central Coast",1
+2013,106400480,"0/Level III","Standby/Basic",14,202,0.128802510864317,"Central Coast",1
+2014,106400480,"0/Level III","Standby/Basic",14,105,0.122409252261537,"Central Coast",2
+2015,106400524,"0/Level III","Standby/Basic",9,2,0.104406807873164,"Central Coast",1
+2013,106400548,"0/Level III","Standby/Basic",23,16,0.106600233745463,"Central Coast",1
+2014,106400548,"0/Level III","Standby/Basic",23,3,0.0909914914768574,"Central Coast",2
+2015,106400548,"0/Level III","Standby/Basic",23,77,0.0866137406257726,"Central Coast",3
+2015,106410782,"0/Level III","Standby/Basic",15,16,0.0697781997906167,"San Francisco Bay Area",1
+2013,106410817,"0/Level III","Standby/Basic",18,1244,0.215062140604712,"San Francisco Bay Area",1
+2015,106410817,"0/Level III","Standby/Basic",18,1084,0.184141546526868,"San Francisco Bay Area",2
+2013,106420493,"0/Level III","Standby/Basic",32,4,0.0852078459600504,"Central Coast",1
+2013,106430705,"Level II/Level I","Standby/Basic",33,152,0.152377153797064,"San Francisco Bay Area",1
+2014,106430705,"Level II/Level I","Standby/Basic",27,55,0.136358074209031,"San Francisco Bay Area",2
+2015,106430705,"Level II/Level I","Standby/Basic",42,19,0.138576153409281,"San Francisco Bay Area",3
+2013,106430763,"0/Level III","Standby/Basic",28,254,0.155778894472362,"San Francisco Bay Area",1
+2014,106430763,"0/Level III","Standby/Basic",28,196,0.143764102110339,"San Francisco Bay Area",2
+2015,106430763,"0/Level III","Standby/Basic",28,125,0.157528658262963,"San Francisco Bay Area",3
+2013,106430779,"0/Level III","Standby/Basic",29,29,0.163046693429115,"San Francisco Bay Area",1
+2014,106430779,"0/Level III","Standby/Basic",25,15,0.148045081396967,"San Francisco Bay Area",2
+2015,106430779,"0/Level III","Standby/Basic",25,27,0.150016311186367,"San Francisco Bay Area",3
+2013,106430837,"0/Level III","Standby/Basic",23,180,0.176304712932053,"San Francisco Bay Area",1
+2014,106430837,"0/Level III","Standby/Basic",23,34,0.11899897854954,"San Francisco Bay Area",2
+2015,106430837,"0/Level III","Standby/Basic",23,61,0.157764102564103,"San Francisco Bay Area",3
+2013,106430883,"Level II/Level I","Comprehensive",24,451,0.231053791775407,"San Francisco Bay Area",1
+2014,106430883,"Level II/Level I","Comprehensive",24,243,0.189321371275486,"San Francisco Bay Area",2
+2015,106430883,"Level II/Level I","Comprehensive",24,225,0.204152249134948,"San Francisco Bay Area",3
+2013,106431506,"0/Level III","Standby/Basic",28,19,0.114647887323944,"San Francisco Bay Area",1
+2014,106431506,"0/Level III","Standby/Basic",28,101,0.103335872588446,"San Francisco Bay Area",2
+2015,106431506,"0/Level III","Standby/Basic",25,188,0.0960662662530526,"San Francisco Bay Area",3
+2015,106434138,"0/Level III","Standby/Basic",8,262,0.0894718487232146,"San Francisco Bay Area",1
+2013,106434153,"0/Level III","Standby/Basic",32,42,0.138265839120015,"San Francisco Bay Area",1
+2014,106434153,"0/Level III","Standby/Basic",32,21,0.119377601408304,"San Francisco Bay Area",2
+2015,106434153,"0/Level III","Standby/Basic",32,52,0.108340676285935,"San Francisco Bay Area",3
+2013,106440755,"0/Level III","Standby/Basic",24,27,0.215395840933966,"Central Coast",1
+2014,106440755,"0/Level III","Standby/Basic",24,97,0.177532904805632,"Central Coast",2
+2015,106440755,"0/Level III","Standby/Basic",24,148,0.173187698072592,"Central Coast",3
+2013,106444013,"0/Level III","Standby/Basic",14,10,0.0772428495292237,"Central Coast",1
+2014,106444013,"0/Level III","Standby/Basic",14,8,0.0865525339505122,"Central Coast",2
+2015,106444013,"0/Level III","Standby/Basic",14,91,0.077755261106781,"Central Coast",3
+2013,106491064,"Level II/Level I","Standby/Basic",26,4,0.179208856487107,"North Coast",1
+2013,106500867,"0/Level III","Standby/Basic",32,786,0.110108632556597,"Northern San Joaquin Valley",1
+2013,106500939,"Level II/Level I","Standby/Basic",44,8,0.193114096032114,"Northern San Joaquin Valley",1
+2015,106500939,"Level II/Level I","Standby/Basic",44,10,0.150378841478318,"Northern San Joaquin Valley",2
+2013,106504042,"0/Level III","Standby/Basic",37,1,0.102580909463335,"Northern San Joaquin Valley",1
+2015,106504042,"0/Level III","Standby/Basic",37,9,0.0986579066802101,"Northern San Joaquin Valley",2
+2013,106560473,"0/Level III","Standby/Basic",22,68,0.144429808054196,"Central Coast",1
+2014,106560473,"0/Level III","Standby/Basic",22,90,0.137254007707568,"Central Coast",2
+2015,106560473,"0/Level III","Standby/Basic",22,473,0.126386980872873,"Central Coast",3
+2013,106560481,"Level II/Level I","Standby/Basic",20,715,0.107607502394133,"Central Coast",1
+2014,106560481,"Level II/Level I","Standby/Basic",20,8,0.127099890914758,"Central Coast",2
+2015,106560481,"Level II/Level I","Standby/Basic",20,1501,0.125162725103059,"Central Coast",3
+2013,106560492,"Level II/Level I","Standby/Basic",23,30,0.199889111202179,"Central Coast",1
+2015,106560492,"Level II/Level I","Standby/Basic",23,42,0.196780224345659,"Central Coast",2
+2013,106560501,"0/Level III","Standby/Basic",6,9,0.0845630694212755,"Central Coast",1
+2015,106560501,"0/Level III","Standby/Basic",6,24,0.0677890511762738,"Central Coast",2
+2013,106560508,"0/Level III","Standby/Basic",14,134,0.123691867885038,"Central Coast",1
+2014,106560508,"0/Level III","Standby/Basic",14,170,0.0980488898856246,"Central Coast",2
+2015,106560508,"0/Level III","Standby/Basic",14,81,0.117083488864004,"Central Coast",3
+2013,106560521,"0/Level III","Standby/Basic",9,2,0.0739040475882581,"Central Coast",1
+2014,106560521,"0/Level III","Standby/Basic",9,24,0.0697307055814653,"Central Coast",2
+2015,106560521,"0/Level III","Standby/Basic",9,70,0.0888976950003302,"Central Coast",3
+2013,106560525,"0/Level III","Standby/Basic",10,10,0.155743898032259,"Central Coast",1
+2014,106560525,"0/Level III","Standby/Basic",10,191,0.156842862750229,"Central Coast",2
+2015,106560525,"0/Level III","Standby/Basic",10,274,0.169873049605727,"Central Coast",3
+2013,106560529,"0/Level III","Standby/Basic",20,179,0.112657739123367,"Central Coast",1
+2014,106560529,"0/Level III","Standby/Basic",20,302,0.0982996712071395,"Central Coast",2
+2015,106560529,"0/Level III","Standby/Basic",20,254,0.113800196762365,"Central Coast",3
