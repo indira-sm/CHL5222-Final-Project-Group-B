@@ -5,16 +5,13 @@ library(broom)
 library(knitr)
 library(kableExtra)
 
-# Helper
 make_gee_table_ci <- function(fit, digits = 3,
-                              caption = "GEE model results (Rate Ratios)") {
+                              caption = "Results from model fitted using GEE model") {
   
   tab <- broom::tidy(fit) %>%
     mutate(
       lower = estimate - 1.96 * std.error,
       upper = estimate + 1.96 * std.error,
-      
-      estimate = exp(estimate),
       lower = exp(lower),
       upper = exp(upper),
       
@@ -30,16 +27,23 @@ make_gee_table_ci <- function(fit, digits = 3,
         TRUE ~ term
       ),
       
-      `Estimate (RR)` = round(estimate, digits),
-      SE = round(std.error, digits),
-      CI = paste0("(", round(lower, digits), ", ", round(upper, digits), ")"),
-      Wald = round(statistic, digits),
+      `Estimate (SE)` = sprintf(
+        "%.*f (%.*f)", digits, estimate, digits, std.error
+      ),
+      
+      `RR (95% CI)` = sprintf(
+        "%.*f (%.*f, %.*f)",
+        digits, exp(estimate),
+        digits, lower,
+        digits, upper
+      ),
+      
       `p-value` = ifelse(p.value < 0.001, "<0.001", sprintf("%.3f", p.value))
     ) %>%
-    select(Term, `Estimate (RR)`, SE, CI, Wald, `p-value`)
+    select(Term, `Estimate (SE)`, `RR (95% CI)`, `p-value`)
   
   kable(tab,
-        align = c("l", "c", "c", "c", "c", "c"),
+        align = c("l", "c", "c", "c"),
         caption = caption,
         booktabs = TRUE,
         linesep = "") %>%
