@@ -35,6 +35,7 @@ bibliography: references.bib
 # Installation of knitr: install.packages("knitr")
 # Installation of kableExtra: install.packages("kableExtra")
 # Installation of nlme: install.packages("nlme")
+# Installation of car: install.packages("car")
 suppressPackageStartupMessages(library(here))
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(naniar))
@@ -45,6 +46,7 @@ suppressPackageStartupMessages(library(broom))
 suppressPackageStartupMessages(library(knitr))
 suppressPackageStartupMessages(library(kableExtra))
 suppressPackageStartupMessages(library(nlme))
+suppressPackageStartupMessages(library(car))
 ```
 
 # Introduction
@@ -84,7 +86,7 @@ Descriptive statistics were computed to summarize the distributions of the outco
 
 ## Software and Reproducibility
 
-All analyses were conducted using version 4.5.1 of the `R` programming language [@R] as well as the `here` [@here], `tidyverse` [@tidyverse], `naniar` [@naniar], `mice` [@mice], `geepack` [@geepack], `table1` [@table1], `broom` [@broom], `knitr` [@knitr], `kableExtra` [@kableExtra], and `nlme` [@nlme] packages (versions 1.0.2, 2.0.0, 1.1.0, 3.18.0, 1.3.13, 1.5.1, 1.0.12, 1.50, 1.4.0, and 3.1-169, respectively). The `geeglm` function from the `geepack` package [@geepack] was used to fit the model with GEE. All code used in this analysis is provided in an `R` Project on GitHub to ensure full reproducibility of results.
+All analyses were conducted using version 4.5.1 of the `R` programming language [@R] as well as the `here` [@here], `tidyverse` [@tidyverse], `naniar` [@naniar], `mice` [@mice], `geepack` [@geepack], `table1` [@table1], `broom` [@broom], `knitr` [@knitr], `kableExtra` [@kableExtra], `nlme` [@nlme], and `car` [@car] packages (versions 1.0.2, 2.0.0, 1.1.0, 3.18.0, 1.3.13, 1.5.1, 1.0.12, 1.50, 1.4.0, 3.1-169, and 3.1-5, respectively). The `geeglm` function from the `geepack` package [@geepack] was used to fit the model with GEE. All code used in this analysis is provided in an `R` Project on GitHub to ensure full reproducibility of results.
 
 # Results
 
