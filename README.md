@@ -25,7 +25,7 @@ To reproduce this analysis, complete the following steps:
 6. Under "Create project as subdirectory of", use the Browse button to select a location on your computer of your choosing.
 7. Click on "Create Project".
 8. In RStudio, navigate to "Files".
-9. Open `main.R`, select all of the code in `main.R`, and click on "Run".
+9. Click on `main.R`, select all of the code in `main.R`, and click on "Run".
 
 All of the objects used in this analysis should now be in the various folders listed above (`data/`, `figures/`, `models/`, `tables/`, `tibbles/`, and `values/`).
 
@@ -34,7 +34,7 @@ All of the objects used in this analysis should now be in the various folders li
 Afterward, to reproduce the report in `.pdf` format, complete the following steps:
 
 1. In RStudio, navigate to "Files".
-2. Open the `report` folder and click on `report.qmd`.
+2. In the CHL5222-Final-Project-Group-B directory, open the `report` folder and click on `report.qmd`.
 3. In the `report.qmd` file, click on "Render".
 
 The report should now open in your browser in `.pdf` format.
