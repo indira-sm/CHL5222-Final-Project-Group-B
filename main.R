@@ -1,20 +1,8 @@
 #### Preamble ####
 
-# Purpose: Install the packages and run the scripts used in this analysis.
+# Purpose: Run the scripts used in this analysis.
 # Authors: Yang Lei, Indira Mishra, Benny Rochwerg, and Peiqing Yu
 # Date: April 6, 2026
-
-#### Install Packages ####
-
-install.packages("here")
-install.packages("tidyverse")
-install.packages("naniar")
-install.packages("mice")
-install.packages("geepack")
-install.packages("table1")
-install.packages("broom")
-install.packages("knitr")
-install.packages("kableExtra")
 
 #### Run Scripts ####
 

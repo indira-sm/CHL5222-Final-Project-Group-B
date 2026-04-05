@@ -1,20 +1,23 @@
 #### Preamble ####
 
-# Purpose: Load packages used in the analysis.
+# Purpose: Load packages used in the analysis. Installation of packages
+# is also performed as a failsafe.
 # Authors: Yang Lei, Indira Mishra, Benny Rochwerg, and Peiqing Yu
 # Date: April 6, 2026
 
 #### Load Packages ####
 
-# Installation of here: install.packages("here")
-# Installation of tidyverse: install.packages("tidyverse")
-# Installation of naniar: install.packages("naniar")
-# Installation of mice: install.packages("mice")
-# Installation of geepack: install.packages("geepack")
-# Installation of table1: install.packages("table1")
-# Installation of broom: install.packages("broom")
-# Installation of knitr: install.packages("knitr")
-# Installation of kableExtra: install.packages("kableExtra")
+install.packages("here")
+install.packages("tidyverse")
+install.packages("naniar")
+install.packages("mice")
+install.packages("geepack")
+install.packages("table1")
+install.packages("broom")
+install.packages("knitr")
+install.packages("kableExtra")
+install.packages("nlme")
+
 suppressPackageStartupMessages(library(here))
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(naniar))
@@ -24,3 +27,4 @@ suppressPackageStartupMessages(library(table1))
 suppressPackageStartupMessages(library(broom))
 suppressPackageStartupMessages(library(knitr))
 suppressPackageStartupMessages(library(kableExtra))
+suppressPackageStartupMessages(library(nlme))
