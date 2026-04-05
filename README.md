@@ -2,13 +2,13 @@
 
 This repository contains the files used to complete the analysis and report for this project.
 
-## File Structure
+## Folders
 
 - `data/` contains the raw and processed data used in this analysis.
 - `figures/` contains figures used in the preliminary analysis and final report.
 - `models/` contains model files used in the preliminary analysis and final report.
 - `report/` contains the final report in `.pdf` and `.qmd` formats as well as the `.bib` file used to produce the references list.
-- `scripts/` contains the `R` scripts used in this analysis.
+- `scripts/` contains `R` scripts used in this analysis.
 - `tables/` contains the model results in `.rds` format.
 - `tibbles/` contains tibbles used in the preliminary analysis.
 - `values/` contains numerical values used in the preliminary analysis and final report.
