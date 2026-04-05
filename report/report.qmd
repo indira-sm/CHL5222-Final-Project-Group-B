@@ -1,0 +1,266 @@
+---
+title: "Factors Associated with Ambulance Diversion Hours: An Analysis of California Hospitals (2013–2015)"
+author:
+  - Yang Lei
+  - Indira Mishra
+  - Benny Rochwerg
+  - Peiqing Yu
+thanks: "The GitHub repository containing the files used to complete this analysis and report is located at <https://github.com/indira-sm/CHL5222-Final-Project-Group-B>. None of the authors received help from the course instructor or teaching assistant. Only Yang Lei and Indira Mishra used an AI tool (ChatGPT) to refine wording and help create figures and a table, respectively."
+date: 04-06-2026
+date-format: long
+toc: true
+toc-depth: 1
+toc-title: "Table of Contents"
+format: pdf
+linestretch: 1
+bibliography: references.bib
+---
+
+\newpage
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+#### Load Packages ####
+
+# Installation of here: install.packages("here")
+# Installation of tidyverse: install.packages("tidyverse")
+# Installation of naniar: install.packages("naniar")
+# Installation of mice: install.packages("mice")
+# Installation of geepack: install.packages("geepack")
+# Installation of table1: install.packages("table1")
+# Installation of broom: install.packages("broom")
+# Installation of knitr: install.packages("knitr")
+# Installation of kableExtra: install.packages("kableExtra")
+suppressPackageStartupMessages(library(here))
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(naniar))
+suppressPackageStartupMessages(library(mice))
+suppressPackageStartupMessages(library(geepack))
+suppressPackageStartupMessages(library(table1))
+suppressPackageStartupMessages(library(broom))
+suppressPackageStartupMessages(library(knitr))
+suppressPackageStartupMessages(library(kableExtra))
+```
+
+# Introduction
+
+In California, the health of patients is threatened by emergency department (ED) overcrowding. To address ED overcrowding, a hospital can close and redirect ambulances to other hospitals in a process called ambulance diversion by implementing diversion status. Data on hospital diversion status from ED-containing hospitals in California were gathered by the California Office of Statewide Health Planning and Development. In particular, the dataset spans three years, from 2013 to 2015, and includes 10 variables: `year` (the year; 2013, 2014, or 2015), `id` (a numerical label for each hospital), `county` (the California county each hospital belongs to), `trauma` (each hospital's trauma center designation; None/0, Level I, Level II, or Level III), `totalvisits` (how many EMS visits were made to the hospital in that year), `admit` (how many admitted EMS visits occurred for the hospital in that year), `emslevel` (each hospital's EMS level; Standby, Basic, or Comprehensive), `stations` (how many patient-accessible ED stations were present for the hospital in that year), `diverthours` (the number of diversion status hours for the hospital in that year), and `admitrate` (the admission rate for the hospital in that year, calculated as `admit` divided by `totalvisits`). To gain insight into the ambulance diversion phenomenon, the present study aimed to answer this research question: What factors are related to the number of California hospital ambulance diversion hours between 2013 and 2015?
+
+# Methods
+
+## Data Cleaning and Processing
+
+To answer the research question of interest, the dataset was first cleaned and processed. Namely, due to the small number of hospitals associated with the Level I, Level II, and Level III trauma center designations, the trauma center designation variable was converted to a factor with two levels (0/Level III, the reference level, and Level II/Level I). This grouping was chosen based on @Melnick, which describes Level I as the maximum trauma care level. Similarly, due to the low number of hospitals with a Standby or Comprehensive EMS level, the EMS level variable was converted to a factor with two levels (Standby/Basic, the reference level, and Comprehensive).
+
+Next, since 14 of the 25 counties in the dataset each contained just three or fewer hospitals, the counties were consolidated into their corresponding 10 regions according to the categorization scheme from @regions. In doing so, a new factor variable `region` was created with levels Superior California (the reference level), North Coast, San Francisco Bay Area, Northern San Joaquin Valley, Central Coast, Southern San Joaquin Valley, Inland Empire, Los Angeles County, Orange County, and San Diego - Imperial. In addition, a variable `time` was added to the dataset representing the measurement occasion number for each hospital. Furthermore, the variable `year` was maintained as continuous rather than categorical due to approximate visual linearity in the mean trajectory for the ambulance diversion hours from 2013 to 2015.
+
+## Missing Data Assessment
+
+As the dataset contained only three measurement occasions and approximately 65\% of the 184 hospitals provided complete data across all years, assessing the missing data mechanism was a critical preliminary step. Little's missing completely at random (MCAR) test was conducted, which yielded a $p$-value of 0.35 suggesting no evidence to reject the MCAR null hypothesis. In addition, a heatmap of the missing data pattern confirmed an intermittent missingness structure rather than systematic hospital dropout. Under this assumption, an available data analysis was used with all observed data. This approach helped maximize statistical power while maintaining valid inference under MCAR conditions, which is a key assumption for the modelling approach employed (standard generalized estimating equations (GEE)).
+
+## Statistical Analysis
+
+To address the population-level research question, a Poisson model with a log link function was fitted using GEE. This approach accounted for within-hospital correlation due to repeated measurements while providing population-averaged estimates.
+
+The log link was chosen to model the non-negative and right-skewed nature of annual ambulance diversion hours. A scale parameter was estimated to account for potential overdispersion. An exchangeable working correlation structure was specified, assuming a constant correlation between repeated observations within the same hospital. This choice was appropriate given the small number of time points and allowed within-hospital correlation to be incorporated.
+
+The primary outcome was annual ambulance diversion hours per hospital. The model included year, trauma level (trauma), EMS level (emslevel), number of stations (stations), admission rate (admitrate), and geographic region (region) as explanatory variables. Based on preliminary exploratory analyses of response profiles, an interaction term between EMS level and year was also included to allow for differential temporal trends across EMS levels. The model specification was
+
+$$
+\log(E[Y_{ij}]) = \beta_{0} + \beta_{1}\text{year}_{ij} + \beta_{2}\text{trauma}_{ij} + \beta_{3}\text{emslevel}_{i} + \beta_{4}\text{stations}_{ij} +
+$$
+$$
+\beta_{5}\text{admitrate}_{ij} + \beta_{6}\text{region}_{i} + \beta_{7}\text{emslevel}_{i} \times \text{year}_{ij}
+$$
+
+where the subscripts $i$ and $j$ represent hospital $i$ and year $j$, respectively, $Y_{ij}$ represents diversion hours, $\text{trauma}_{ij}$, $\text{emslevel}_{i}$, and $\text{region}_{i}$ are categorical variables, and $\text{year}_{ij}$, $\text{stations}_{ij}$, and $\text{admitrate}_{ij}$ are continuous variables. For each categorical variable, the associated $\beta$ represents a vector of coefficients corresponding to the levels of that factor relative to the reference level. All variables were defined as described previously in this report.
+
+Descriptive statistics were computed to summarize the distributions of the outcome and covariates. Model results were reported as regression coefficients with corresponding robust standard errors (SEs), rate ratio (RR) estimates with 95\% confidence intervals (CIs), and $p$-values. Statistical significance was assessed at the 0.05 level.
+
+## Software and Reproducibility
+
+All analyses were conducted using version 4.5.1 of the `R` programming language [@R] as well as the `here` [@here], `tidyverse` [@tidyverse], `naniar` [@naniar], `mice` [@mice], `geepack` [@geepack], `table1` [@table1], `broom` [@broom], `knitr` [@knitr], and `kableExtra` [@kableExtra] packages (versions 1.0.2, 2.0.0, 1.1.0, 3.18.0, 1.3.13, 1.5.1, 1.0.12, 1.50, and 1.4.0, respectively). The `geeglm` function from the `geepack` package [@geepack] was used to fit the model with GEE. All code used in this analysis is provided in an `R` Project on GitHub to ensure full reproducibility of results.
+
+# Results
+
+## Descriptive Characteristics of the Analytic Sample
+
+The final analytic dataset included 184 California hospitals. @tbl-descriptive summarizes the characteristics of the final analytic dataset used for model fitting.
+
+\vspace{0.75cm}
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-descriptive
+#| tbl-cap: |
+#|     Characteristics of the final analytic dataset used for model fitting
+#| tbl-pos: H
+
+# Load dataset
+ambulance <-
+  readRDS(
+    here::here(
+      "data/processed/ambulance.rds"
+    )
+  )
+
+# Display table
+table1(~ diverthours + trauma + emslevel + stations + admitrate + region |
+         as.factor(year),
+       data = ambulance) %>%
+  t1kable(format = "latex", booktabs = TRUE) |>
+  kable_styling(latex_options = c("striped", "scale_down", "hold_position",
+                                  "center"),
+                font_size = 11)
+```
+*Note:*\
+N = Number of hospitals; SD = Standard deviation; Min = Minimum; Max = Maximum
+
+\vspace{0.75cm}
+
+There were 450 hospital-year observations between 2013 and 2015. Of these, 153 observations were from 2013, 151 from 2014, and 146 from 2015, reflecting a slightly unbalanced longitudinal panel.
+
+Mean annual ambulance diversion hours increased over time, rising from 395 hours (standard deviation (SD) 620 hours) in 2013 to 486 hours (SD 758 hours) in 2014 and 674 hours (SD 886 hours) in 2015. The large SDs relative to the means suggest that the outcome was overdispersed, which may violate the equidispersion assumption of a Poisson model. Median diversion hours also increased over the study period, from 169 hours in 2013 to 191 hours in 2014 and 374 hours in 2015. The gap between the means and medians suggests a strongly right-skewed distribution in all three years.
+
+Most observations came from hospitals classified as 0/Level III trauma centers, representing no or lower trauma designation (367/450, 81.6\%), and Standby/Basic EMS level hospitals, representing lower EMS capacity (434/450, 96.4\%). Hospitals had a mean of 26.3 ED stations overall, and the mean admission rate was 0.155. Regional representation was uneven, with Los Angeles County contributing the largest share of observations. Overall, these descriptive findings suggest that ambulance diversion hours increased over time and varied considerably across hospitals, providing context for the population-averaged regression analyses that follow.
+
+## Model Results
+
+@tbl-model depicts the results from the model fitted using GEE.
+
+\vspace{0.75cm}
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-model
+#| tbl-cap: |
+#|     Results from the model fitted using generalized estimating equations
+#| tbl-pos: H
+
+# Load table
+model_results_table <-
+  readRDS(
+    here::here(
+      "tables/model_results_table.rds"
+    )
+  )
+
+# Display table
+model_results_table
+```
+*Note:*\
+SE = Standard error; RR = Rate ratio; CI = Confidence interval, Inf = Infinity
+
+\vspace{0.75cm}
+
+There was strong evidence of an increasing trend in diversion hours over time. Specifically, each additional year was associated with a 31\% increase ($p < 0.001$) in expected diversion hours, holding all other variables constant. This trend is consistent with @fig-trajectory-overall, where a clear upward pattern was observed over time.
+
+\vspace{0.75cm}
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-trajectory-overall
+#| fig-cap: |
+#|     Mean ambulance diversion status hours over time
+#| fig-pos: H
+
+# Load figure
+figure_diverthours_by_year <-
+  readRDS(
+    here::here(
+      "figures/figure_diverthours_by_year.rds"
+    )
+  )
+
+# Display figure
+figure_diverthours_by_year
+```
+
+\vspace{0.75cm}
+
+The number of stations at a hospital was also a significant, though small, factor. One additional station was associated with a 1.7\% increase ($p = 0.007$) in expected diversion hours, holding all other variables constant.
+
+Substantial regional differences in diversion hours were observed. Compared to the Superior California region, all regions except the North Coast had significantly higher diversion hours (holding all other variables constant). The largest increases were observed for the Los Angeles County, San Diego - Imperial, and San Francisco Bay Area regions. @fig-trajectory-region further illustrates the differences over time across the regions.
+
+\vspace{0.75cm}
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-trajectory-region
+#| fig-cap: |
+#|     Mean trajectory for the ambulance diversion hours by region
+#| fig-pos: H
+#| fig-width: 10
+#| fig-height: 8
+
+# Load figure
+diverthours_trajectory_by_region <-
+  readRDS(
+    here::here(
+      "figures/diverthours_trajectory_by_region.rds"
+    )
+  )
+
+# Display figure
+diverthours_trajectory_by_region
+```
+
+\vspace{0.75cm}
+
+Despite initial visual evidence suggesting a possible interaction between EMS level and time (@fig-trajectory-emslevel), the interaction term was not statistically significant in the model.
+
+\vspace{0.75cm}
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-trajectory-emslevel
+#| fig-cap: |
+#|     Mean trajectory for the ambulance diversion hours by EMS level
+#| fig-pos: H
+
+# Load figure
+diverthours_trajectory_by_emslevel <-
+  readRDS(
+    here::here(
+      "figures/diverthours_trajectory_by_emslevel.rds"
+    )
+  )
+
+# Display figure
+diverthours_trajectory_by_emslevel
+```
+
+\vspace{0.75cm}
+
+Additionally, EMS level, trauma center designation, and admission rate were not significant predictors of diversion hours. In particular, hospitals with Level II/Level I trauma center designation did not differ significantly from those with Level III or no trauma center, holding all other variables constant ($p = 0.946$). Hospitals with Comprehensive EMS level did not differ significantly from those with Basic or Standby levels, holding all other variables constant ($p = 0.823$).
+
+The estimated working correlation parameter indicated moderate within-hospital correlation ($\alpha = 0.56$, SE = 0.10), supporting the motivation for using GEE. The estimated scale parameter ($\varphi = 649$) showed large overdispersion, which was consistent with findings from the exploratory analysis. This suggests that the variability in ambulance diversion hours exceeded that expected under a Poisson assumption. Although GEE provides valid inference in the presence of overdispersion through the use of robust standard errors, the large value of $\varphi$ indicated that the data were highly variable. As such, results were interpreted as population-level associations rather than precise predictions for individual hospitals.
+
+# Discussion
+
+This study examined factors related to the number of California hospital ambulance diversion hours between 2013 and 2015 using a population-averaged Poisson model estimated via GEE. Overall, diversion hours were significantly associated with year, number of ED stations, and most regions. In contrast, trauma center designation, EMS level, admission rate, and the interaction between EMS level and year were not statistically significant in the model.
+
+The positive coefficient estimate for year suggests that diversion hours increased over time; that is, ambulance diversion became more common over the 2013-2015 study period in this sample. Hospitals with a greater number of ED stations also had a higher rate of diversion hours. This positive association may reflect broader differences in hospital scale, patient demand, or system pressure, rather than a direct effect of station count itself. In addition, the significant regional differences suggest that local healthcare system conditions may play an important role in shaping ambulance diversion practices across California.
+
+Several limitations should be noted. First, this analysis identified associations rather than causal effects, so the significant predictors should not be interpreted as directly causing changes in diversion hours. Second, diversion hours were highly variable and strongly right-skewed, and the large estimated scale parameter indicated substantial overdispersion beyond that expected under a standard Poisson model. Although the use of GEE with robust SEs supports valid inference for correlated data, the magnitude of the overdispersion suggests that important sources of heterogeneity were not captured by the available covariates. Third, the dataset contained a limited set of hospital characteristics, so other potentially relevant factors, such as hospital ownership (public versus private), urban versus rural setting, staffing, or inpatient bed availability, could not be assessed.
+
+Despite these limitations, this study shows the usefulness of marginal modelling for repeated hospital-level outcomes. By accounting for within-hospital correlation over time, the GEE approach allowed the analysis to address the study's population-level research question while respecting the longitudinal structure of the data. Future work could incorporate additional hospital and community characteristics and explore alternative count-data models, such as negative binomial approaches, to better accommodate overdispersion and further investigate variation in ambulance diversion across hospitals.
+
+Overall, the findings suggest that ambulance diversion was associated primarily with temporal trends, hospital operational scale, and geographic context, while substantial unexplained variability remained across hospitals.
+
+\newpage
+
+# References
