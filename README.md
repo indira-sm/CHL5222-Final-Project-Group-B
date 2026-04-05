@@ -18,7 +18,7 @@ This repository contains the files used to complete the analysis and report for 
 To reproduce this analysis, complete the following steps:
 
 1. Install Git, `R`, and RStudio on your computer if they are not already installed.
-2. Open RStudio on your computer.
+2. Open a new RStudio window on your computer.
 3. Navigate to File --> New Project --> Version Control --> Git.
 4. Under "Repository URL", paste this link: https://github.com/indira-sm/CHL5222-Final-Project-Group-B.git
 5. Under "Project directory name", ensure that the following is entered: CHL5222-Final-Project-Group-B
