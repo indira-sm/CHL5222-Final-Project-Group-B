@@ -46,7 +46,7 @@ make_gee_table_ci <- function(fit, digits = 3) {
         term == "admitrate" ~ "Admission rate",
         term == "emslevelComprehensive" ~ "EMS level: Comprehensive",
         term == "traumaLevel II/Level I" ~
-          "Trauma center designation: 0/Level III",
+          "Trauma center designation: Level II/Level I",
         term == "year:emslevelComprehensive" ~
           "Year × EMS level: Comprehensive",
         grepl("^region", term) ~ paste0("Region: ", gsub("region", "", term)),

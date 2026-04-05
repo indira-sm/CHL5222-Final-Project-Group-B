@@ -13,11 +13,11 @@ ambulance <- read.table(file = here::here("data/raw/ambulance.txt"),
                         header = TRUE)
 
 # Convert trauma variable to a factor with two levels
-# (0/Level III, the reference level, and Level II/Level I)
+# (None/Level III, the reference level, and Level II/Level I)
 ambulance <- ambulance %>%
   mutate(
     trauma = fct_collapse(as.factor(trauma),
-                          "0/Level III" = c("0", "LEVEL III"),
+                          "None/Level III" = c("0", "LEVEL III"),
                           "Level II/Level I" = c("LEVEL II", "LEVEL I")
     )
   )
